@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+*{
+    padding:0; margin: 0; box-sizing: border-box; 
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav.navbar{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 5px rgb(206, 206, 206);
+}
+.navbar img{
+    display: none;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 25px;
+}
+div.logo{
+    padding: 14px; 
+    font-size: 40px; 
+    letter-spacing: 5px; 
+    color: rgb(255, 0, 106);
+    font-family: 'Oswald', sans-serif;
+    
+}
+.navbar .navitems{
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    flex-flow: column nowrap;
+    list-style: none;
+    width: 260px;
+    background-color: rgb(208, 255, 0);
+    height: 100%;
+}
+.navitems li{
+    text-align: center;
+    transition: 0.1s;
+    padding: 40px;
+    width: 100%;
+}
+.navitems li a{
+    color: rgb(153, 0, 64);
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+.navitems li:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: rgb(55, 255, 188);
+}
+.navitems li:hover a{
+    color: rgb(255, 0, 106);
+}
+
+/*Conteúdo*/
+
+main{
+    padding: 10px;
+    font-size: 30px;
+    text-align:center;
+}
+div.dv1, .dv2{
+    padding: 20px;
+    background-image: url(three-disposable-face-masks.png);
+    background-size: 700px;
+    min-height: 300px;
+    font-weight: bolder;
+    color: rgb(0, 64, 124);
+}
+.dv2{
+    margin-top: 40px;
+    background-color: white;
+    background-image: none;
+    color: black;
+}
+.dv1 section b{
+    font-size: 50px;
+    color: rgb(223, 0, 48);
+}
+.dv2 section b{
+    margin-bottom: 15px;
+    font-size: 38px;
+    color: rgb(56, 0, 12);
+}
+.dv2 section p{
+    margin-top: 40px;
+}
+button.cta{
+    background-color: rgb(208, 255, 0);
+    border: none;
+    padding: 23px;
+    font-size: 22px;
+    font-weight: bolder;
+    border-radius: 7px;
+    color: rgb(189, 0, 0);
+    margin-top: 30px;
+}
+button.cta:hover{
+    cursor: pointer;
+}
+button.cta:active{
+    background-color: rgb(115, 141, 0);
+    color:rgb(255, 109, 109);
+}
+
+/*Rodapé*/
+
+footer{
+    background-color: rgb(96, 255, 202);
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 20px;
+    align-items: center;
+}
+
+footer ul{
+    display: flex;
+    flex-flow: column nowrap;
+    list-style: none;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 20px;
+    padding: 30px;
+    width: 100%;
+    min-height: 200px;
+}
+footer ul li a{
+    text-decoration: none;
+    color: rgb(255, 0, 76);
+}
+footer ul li a:hover{
+    color: rgb(153, 0, 64);
+}
+
+
+/*BreakPoints*/
+
+@media (min-width : 720px) {
+    div.dv1{
+        background-size: 800px;
+        min-height: 450px;
+        padding: 40px;
+    }
+}
+
+@media (min-width : 815px) {
+    div.dv1{
+        background-size: 900px;
+        min-height: 500px;
+        padding: 60px;
+    }
+}
+
+@media (min-width : 920px) {
+    div.dv1{
+        background-size: 1000px;
+    }
+}
+
+@media (min-width : 1016px) {
+    .navbar button{
+        display: none;
+    }
+    nav.navbar{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+    nav.navbar .logo{
+        font-size: 35px;
+    }
+    .navbar .navitems{
+        display: flex;
+        justify-content: space-between;
+        position: static;
+        flex-flow: row nowrap;
+        background-color: transparent;
+        height: 100%;
+        width: 500px;
+    }
+    .navitems li{
+        width: auto;
+        padding: 10px;
+        height: 100%;
+    }
+    .navitems li a{
+        font-size: 18px;
+    }
+    .navitems li:hover{
+        background-color: transparent;
+    }
+    .navitems li:hover a{
+        color: rgb(153, 0, 64);
+    }
+    .navitems li a:hover{
+        color: rgb(255, 0, 106);
+    }
+
+    /*Conteúdo*/
+    main div.dv1{
+        background-size: 1400px;
+        min-height: 700px;
+        text-align: start;
+    }
+    .dv1 section{
+        margin-top: 100px;
+    }
+    .dv1 section b{
+        font-size: 70px;
+    }
+
+    /*Rodapé*/
+
+    footer ul{
+        flex-direction: row;
+        align-items: center;
+    }
+}
